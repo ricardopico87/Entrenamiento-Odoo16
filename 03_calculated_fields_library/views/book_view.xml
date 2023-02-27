@@ -6,13 +6,11 @@
         <field name="name">view.inh.tree.book</field>
         <field name="model">ex.book</field>
         <!--calling view parent-->
-        <field name="inherit_id" ref="01_library_system.view_tree_book"/>
+        <field name="inherit_id" ref="02_add_hide_rp_library.view_inh_tree_book"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='loan_number']" position="after">
-                <field name="quantity_in_stock"/>
-            </xpath>
-            <xpath expr="//field[@name='section']" position="replace">
-                <field name="loan_date"/>
+            <xpath expr="//field[@name='loan_date']" position="after">
+                <field name="number_of_sheets"/>
+                <field name="extensive_book" widget="boolean_toggle"/>
             </xpath>
         </field>
     </record>
@@ -22,13 +20,12 @@
         <field name="name">view.inh.form.book</field>
         <field name="model">ex.book</field>
          <!--calling view parent-->
-        <field name="inherit_id" ref="01_library_system.view_form_book"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='loan_number']" position="after">
-                <field name="quantity_in_stock"/>
-            </xpath>
-            <xpath expr="//field[@name='section']" position="before">
-                <field name="loan_date"/>
+        <field name="inherit_id" ref="02_add_hide_rp_library.view_inh_form_book"/>
+
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='loan_date']" position="after">
+                <field name="number_of_sheets"/>
+                <field name="extensive_book" widget="boolean_toggle"/>
             </xpath>
         </field>
     </record>

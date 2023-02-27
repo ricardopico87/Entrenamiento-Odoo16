@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2018 Marlon Falcon Hernandez
+#    This module copyright (C) 2023 Ricardo Pico Ochandategui
 #    (<http://www.marlonfalcon.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,17 +20,17 @@
 ##############################################################################
 
 {
-    'name': 'Father MFH',
-    'version': '16.0.1.0.0',
-    'author': 'Marlon Falcon Hernandez',
-    'maintainer': 'Marlon Falcon Hernandez',
-    'website': 'http://www.marlonfalcon.com',
+    'name': 'Library System RPO',
+    'version': '1.1',
+    'author': 'Ricardo Pico Ochandategui',
+    'maintainer': 'Ricardo Pico Ochandategui',
     'license': 'AGPL-3',
     'category': 'Extra Tools',
-    'summary': 'Short summary.',
+    'summary': 'Library System.',
     'depends': ['base'],
     'data': [
-        'views/view.xml',
+        'security/ir.model.access.csv',
+        'views/book_view.xml',
     ],
     'images': ['static/description/banner.png'],
 }

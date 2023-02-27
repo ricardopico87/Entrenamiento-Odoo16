@@ -18,12 +18,12 @@ msgstr ""
 #. module: 03_calculated_fields_library
 #: model:ir.model.fields,field_description:03_calculated_fields_library.field_ex_book__extensive_book
 msgid "Extensive Book"
-msgstr ""
+msgstr "Libro extenso"
 
 #. module: 03_calculated_fields_library
 #: model:ir.model.fields,field_description:03_calculated_fields_library.field_ex_book__number_of_sheets
 msgid "Number of sheets"
-msgstr ""
+msgstr "Numero de Hojas"
 
 #. module: 03_calculated_fields_library
 #: model:ir.model,name:03_calculated_fields_library.model_ex_book

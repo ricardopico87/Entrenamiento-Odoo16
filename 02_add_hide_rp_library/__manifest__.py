@@ -27,7 +27,7 @@
     'license': 'AGPL-3',
     'category': 'Extra Tools',
     'summary': 'Library System.',
-    'depends': ['base'],
+    'depends': ['01_library_system'],
     'data': [
         'security/ir.model.access.csv',
         'views/book_view.xml',

@@ -1,61 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- views -->
-    <!-- Tree View -->
-    <record id="view_tree_book" model="ir.ui.view">
-        <field name="name">ex.book.tree</field>
+    <!-- inherited Tree View -->
+    <record id="view_inh_tree_book" model="ir.ui.view">
+        <field name="name">view.inh.tree.book</field>
         <field name="model">ex.book</field>
+        <!--calling view parent-->
+        <field name="inherit_id" ref="01_library_system.view_tree_book"/>
         <field name="arch" type="xml">
-           <tree>
-                    <field name="title"/>
-                    <field name="author"/>
-                    <field name="loan_number" optional="show"/>
-                    <field name="section"/>
-                    <field name="edition_new"/>
-                    <field name="gender"/>
-           </tree>
+            <xpath expr="//field[@name='loan_number']" position="after">
+                <field name="quantity_in_stock"/>
+            </xpath>
+            <xpath expr="//field[@name='section']" position="replace">
+                <field name="loan_date"/>
+            </xpath>
         </field>
     </record>
 
-    <!-- Form View -->
-     <record id="view_form_book" model="ir.ui.view">
-        <field name="name">ex.book.form</field>
+    <!-- inherited Form View -->
+     <record id="view_inh_form_book" model="ir.ui.view">
+        <field name="name">view.inh.form.book</field>
         <field name="model">ex.book</field>
+         <!--calling view parent-->
+        <field name="inherit_id" ref="01_library_system.view_form_book"/>
         <field name="arch" type="xml">
-            <form string="Books Inventory">
-                <sheet>
-                <group>
-                    <group>
-                        <field name="title"/>
-                        <field name="author"/>
-                        <field name="loan_number"/>
-                    </group>
-                     <group>
-                        <field name="section"/>
-                        <field name="edition_new"/>
-                        <field name="gender"/>
-                    </group>
-                </group>
-                </sheet>
-            </form>
+            <xpath expr="//field[@name='loan_number']" position="after">
+                <field name="quantity_in_stock"/>
+            </xpath>
+            <xpath expr="//field[@name='section']" position="before">
+                <field name="loan_date"/>
+            </xpath>
         </field>
     </record>
-
-    <!-- defining actions  -->
-    <record model="ir.actions.act_window" id="act_ex_book">
-        <field name="name">Book</field>
-        <field name="res_model">ex.book</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id"  ref="view_tree_book" />
-    </record>
-
-    <!-- forming menu -->
-        <menuitem id="ex_book_menu" name="LIBRARY SYSTEM" web_icon="stock,static/description/icon.png"
-                  sequence="10"/>
-
-    <!--creating submenu-->
-        <menuitem id="submenu_book_menu" name="Books"
-                  sequence="10" parent="ex_book_menu" action="act_ex_book"/>
 
 
 </odoo>

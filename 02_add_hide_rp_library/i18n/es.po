@@ -18,12 +18,12 @@ msgstr ""
 #. module: 02_add_hide_rp_library
 #: model:ir.model.fields,field_description:02_add_hide_rp_library.field_ex_book__loan_date
 msgid "Loan Date"
-msgstr ""
+msgstr "Tiempo de prestamo"
 
 #. module: 02_add_hide_rp_library
 #: model:ir.model.fields,field_description:02_add_hide_rp_library.field_ex_book__quantity_in_stock
 msgid "Quantity in stock"
-msgstr ""
+msgstr "Cantidad almacenada"
 
 #. module: 02_add_hide_rp_library
 #: model:ir.model,name:02_add_hide_rp_library.model_ex_book

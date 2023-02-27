@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- views -->
+    <!-- inherited Tree View -->
+    <record id="view_inh_tree_book" model="ir.ui.view">
+        <field name="name">view.inh.tree.book</field>
+        <field name="model">ex.book</field>
+        <!--calling view parent-->
+        <field name="inherit_id" ref="01_library_system.view_tree_book"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='loan_number']" position="after">
+                <field name="quantity_in_stock"/>
+            </xpath>
+            <xpath expr="//field[@name='section']" position="replace">
+                <field name="loan_date"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- inherited Form View -->
+     <record id="view_inh_form_book" model="ir.ui.view">
+        <field name="name">view.inh.form.book</field>
+        <field name="model">ex.book</field>
+         <!--calling view parent-->
+        <field name="inherit_id" ref="01_library_system.view_form_book"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='loan_number']" position="after">
+                <field name="quantity_in_stock"/>
+            </xpath>
+            <xpath expr="//field[@name='section']" position="before">
+                <field name="loan_date"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <record id="data_pet_01" model="eje.pet">
-            <field name="name">Coco</field>
-            <field name="age">2</field>
-            <field name="color">blue</field>
+        <!--Conforming data to load-->
+        <record id="data_book_1" model="ex.book">
+            <field name="title">Capitan Tormenta</field>
+            <field name="author">Julio Verne</field>
+            <field name="loan_number">24</field>
+            <field name="section">055</field>
+            <field name="edition_new">True</field>
+            <field name="gender">adventure</field>
         </record>
-        <record id="data_pet_02" model="eje.pet">
-            <field name="name">Pinki</field>
-            <field name="age">1</field>
-            <field name="color">Black</field>
+
+         <record id="data_book_2" model="ex.book">
+            <field name="title">El Principito</field>
+            <field name="author">Antoine Exumery</field>
+            <field name="loan_number">45</field>
+            <field name="section">098</field>
+            <field name="edition_new">False</field>
+            <field name="gender">infantile</field>
         </record>
+
     </data>
 </odoo>

@@ -31,6 +31,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/book_view.xml',
+        #Calling the file with the new data
+        'data/library_data.xml'
     ],
     'images': ['static/description/banner.png'],
 }

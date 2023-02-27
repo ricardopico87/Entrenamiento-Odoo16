@@ -32,7 +32,9 @@
         'security/ir.model.access.csv',
         'views/book_view.xml',
         #Calling the file with the new data
-        'data/library_data.xml'
+        'data/library_data.xml',
+        #calling the file whith the secuence format
+        'data/ir_sequence.xml'
     ],
     'images': ['static/description/banner.png'],
 }

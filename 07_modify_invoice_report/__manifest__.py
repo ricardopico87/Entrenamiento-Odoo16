@@ -20,17 +20,17 @@
 ##############################################################################
 
 {
-    'name': 'Module RPO',
+    'name': 'Modify Invoice Report RPO',
     'version': '1.1',
     'author': 'Ricardo Pico Ochandategui',
     'maintainer': 'Ricardo Pico Ochandategui',
     'license': 'AGPL-3',
     'category': 'Extra Tools',
-    'summary': 'Module.',
-    'depends': ['base'],
+    'summary': 'Modify Invoice Report',
+    'depends': ['base', 'account'],
     'data': [
-        'security/ir.model.access.csv',
-        'views/.xml',
+        'reports/invoice_report.xml',
+        'reports/report.xml',
     ],
     'images': ['static/description/banner.png'],
 }

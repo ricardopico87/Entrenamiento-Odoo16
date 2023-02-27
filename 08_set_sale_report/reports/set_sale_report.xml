@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Here it is about modifying through inheritance, knowing the IDs and attributes of the report to modify-->
+    <template id="report_saleorder_document_inherit_sale_management" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='signature']" position="before">
+                <h4 name="h_optional_products" style="color: green; font-size: 20px; font-weight:bold; text-decoration:underline">
+                    <span>ALL THE CHANGES WE WANT</span>
+                </h4>
+        </xpath>
+    </template>
+</odoo>

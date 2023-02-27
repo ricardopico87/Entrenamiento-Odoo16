@@ -19,16 +19,18 @@
 #
 ##############################################################################
 
-{'name': 'Pets RPO 22 UPD',
-    'version': '1.1',
-    'author': 'Ricardo Pico Ochandategui',
-    'maintainer': 'Ricardo Pico Ochandategui',
+{
+    'name': 'Father MFH',
+    'version': '16.0.1.0.0',
+    'author': 'Marlon Falcon Hernandez',
+    'maintainer': 'Marlon Falcon Hernandez',
+    'website': 'http://www.marlonfalcon.com',
     'license': 'AGPL-3',
     'category': 'Extra Tools',
-    'summary': 'Pets Control .',
-    'depends': ['11_hello_world_rpo'],
+    'summary': 'Short summary.',
+    'depends': ['base'],
     'data': [
-        'views/pets_view.xml',
+        'views/view.xml',
     ],
     'images': ['static/description/banner.png'],
 }
